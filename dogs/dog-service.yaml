@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: dogs
   labels:
-    app.kubernetes.io/name: dogs
+    app: dogs
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
@@ -15,4 +15,4 @@ spec:
     # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
     nodePort: 30001
   selector:
-    app.kubernetes.io/name: dogs
+    app: dogs
