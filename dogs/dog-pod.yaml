@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dogs
+  namespace: dogs
+  labels:
+    app: dogs
+spec:
+  #replicas: 2
+  containers:
+  - image: 331023838533.dkr.ecr.us-east-1.amazonaws.com/dogs-ecr:latest
+    name: dogs
+    ports:
+    - containerPort: 80
+      name: http-web
+        #dnsPolicy: ClusterFirst
+        #restartPolicy: Always
+  
